@@ -5,9 +5,6 @@ export default class CompletionSuggestionsPortal extends Component {
   componentWillMount() {
     this.props.store.register(this.props.offsetKey);
     this.updatePortalClientRect(this.props);
-
-    // trigger a re-render so the MentionSuggestions becomes active
-    this.props.setEditorState(this.props.getEditorState());
   }
 
   componentWillReceiveProps(nextProps) {
